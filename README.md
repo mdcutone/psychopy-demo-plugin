@@ -20,8 +20,8 @@ You can install the package using:
 python setup.py install
 ```
 
-You can also build packages. You can use `pip` to install those packages or put
-them up on a public repository.
+You can also build packages and use `pip` to install them or put them up on a 
+public repository for others to download.
 
 You can see the plugin in action by running the following code after installing 
 it:
