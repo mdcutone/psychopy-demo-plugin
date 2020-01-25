@@ -21,10 +21,8 @@ python setup.py install
 ```
 
 You can also build packages and use `pip` to install them or put them up on a 
-public repository for others to download.
-
-You can see the plugin in action by running the following code after installing 
-it:
+public repository for others to download. Runing the following code will show 
+the effect of the plugin package on `Rect`:
 
 ```python
 from psychopy import visual, core, plugins
@@ -32,7 +30,7 @@ plugins.loadPlugin('psychopy-demo-plugin')  # load the plugin
 
 win = visual.Window()  # create a window
 rectStim = visual.Rect(win)  # create a Rect stim
-print(rectStim.getArea())  # print the area using our plugin function
+print(rectStim.getArea())  # print the area using the method added by the plugin
 rectStim.draw()  # draw the rectangle
 win.flip()  # flip buffers
 core.wait(5)  # Wait for 5 seconds and exit
