@@ -11,12 +11,24 @@ from setuptools import setup
 # `psychopy.visual.Rect` class. After the plugin is loaded, any instances of
 # `Rect` will have that method.
 
+# Define the name for your package, this will be used when calling `loadPlugin`.
+# Note, for packages containing only a single module defining objects to export,
+# you should name it something based off this name of the project to avoid
+# import collisions with other packages, here we call it `psychopy_demo_plugin`.
+name = "psychopy-demo-plugin"
+
+# Define entry points. PsychoPy's plugin framework scans packages and looks for
+# entry points advertised in the package metadata which pertains to PsychoPy.
+# Entry points are a dictionary, where keys are fully qualified names to
+# modules and unbound classes which you want to add/modify attributes. Values
+# can be single strings, or lists of strings specifying what attributes of those
+# PsychoPy objects are to reference objects defined in the plugin module.
 entry_points = {
     'psychopy.visual.Rect': ['getArea = psychopy_demo_plugin:get_area']}
 
 # Run the setup function.
 setup(
-    name="psychopy-demo-plugin",  # this should match the project name
+    name=name,  # set the name
     version="0.1",  # put your plugin version here
     packages=['psychopy_demo_plugin'],
     package_data={"": ["*.txt", "*.md"]},
