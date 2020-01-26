@@ -21,7 +21,7 @@ python setup.py install
 ```
 
 You can also build packages and use `pip` to install them or put them up on a 
-public repository for others to download. Runing the following code will show 
+public repository for others to download. Running the following code will show 
 the effect of the plugin package on `Rect`:
 
 ```python
